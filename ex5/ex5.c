@@ -34,6 +34,9 @@ int main()
     write(p[1], msg2, MSGSIZE);
     write(p[1], msg3, MSGSIZE);
 
+    int rc = fork();
+    
+    
     
     return 0;
 }
