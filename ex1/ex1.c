@@ -16,9 +16,11 @@ int main(int argc, char *argv[])
       fprintf(stderr, "fork failed\n");
       exit(1);
     } else if (rc == 0) { // Child
-      printf("Child - X = %d\n", x = 50);
+      x -= 50;
+      printf("Child - X = %d\n", x);
     } else { // Parent
-      printf("Parent - X = %d\n", x = 200);
+      x += 50;
+      printf("Parent - X = %d\n", x);
     }
 
     return 0;
