@@ -15,10 +15,10 @@ int main(int argc, char* argv[])
     int c;
     int rc = fork();
     
-    if (rc < 0) {
+    if (rc < 0) { // Fail
       fprintf(stderr, "fork failed\n");
       exit(1);
-    } else if (rc == 0) {
+    } else if (rc == 0) { // Child
       printf("- Child -\n");
       // Must reopen file for child fork
       while(1) {
@@ -26,7 +26,7 @@ int main(int argc, char* argv[])
         if(feof(fp)) break;
         printf("%c", c);
       }
-    } else {
+    } else { // Parent
       printf("- Parent -\n");
       // accesses file on the parent fork
       while(1) {
