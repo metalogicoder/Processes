@@ -18,6 +18,9 @@ int main(int argc, char *argv[])
     } else if (rc == 0) {
       x = 50;
       printf("ChildID (pid: %d) - X = %d\n", (int) getpid(), x);
+    } else {
+      x = 200;
+      printf("ParentID: (pid: %d) - X = %d\n", (int) getpid(), rc, x);
     }
 
     return 0;
