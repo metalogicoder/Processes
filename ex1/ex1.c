@@ -16,11 +16,9 @@ int main(int argc, char *argv[])
       fprintf(stderr, "fork failed\n");
       exit(1);
     } else if (rc == 0) {
-      x = 50;
-      printf("ChildID (pid: %d) - X = %d\n", (int) getpid(), x);
+      printf("Child - X = %d\n", x = 50);
     } else {
-      x = 200;
-      printf("ParentID: (pid: %d) - X = %d\n", (int) getpid(), rc, x);
+      printf("Parent - X = %d\n", x = 200);
     }
 
     return 0;
