@@ -18,6 +18,10 @@ int main(int argc, char* argv[])
     if (rc < 0) {
       fprintf(stderr, "fork failed\n");
       exit(1);
+    } else if (rc == 0) {
+      printf("- Child -\n");
+      // Must reopen file for child fork
+
     }
 
     return 0;
