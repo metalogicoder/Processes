@@ -28,7 +28,7 @@ int main(int argc, char* argv[])
       }
     } else { // Parent
       printf("- Parent -\n");
-      // accesses file on the parent fork
+      // Accesses file on the parent fork
       while(1) {
         c = fgetc(fp);
         if(feof(fp)) break;
