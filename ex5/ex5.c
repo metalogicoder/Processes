@@ -7,8 +7,9 @@
 #include <unistd.h>
 #include <stdlib.h>
 
-#define MSGSIZE 16
+#define MSGSIZE 16 // size of messages
 
+// messages to be written
 char* msg1 = "hello world #1";
 char* msg2 = "hello world #2";
 char* msg3 = "hello world #3";
@@ -16,6 +17,11 @@ char* msg3 = "hello world #3";
 int main()
 {
     // Your code here
+
+    // buffer for read function
+    char inbuf[MSGSIZE];
+    // array for read(i = [0]) write(i = [1]) data
+    int p[2]; 
     
     return 0;
 }
