@@ -12,12 +12,12 @@ int main(int argc, char *argv[])
     int x = 100;
     int rc = fork();
 
-    if (rc < 0) {
+    if (rc < 0) { // Fail
       fprintf(stderr, "fork failed\n");
       exit(1);
-    } else if (rc == 0) {
+    } else if (rc == 0) { // Child
       printf("Child - X = %d\n", x = 50);
-    } else {
+    } else { // Parent
       printf("Parent - X = %d\n", x = 200);
     }
 
