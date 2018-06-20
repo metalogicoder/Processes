@@ -23,6 +23,14 @@ int main(int argc, char* argv[])
       execv(args[0],args);
 
       puts("This will not print");
+    } else { // Parent
+      puts("- Parent -");
+
+      // Runs EXEC.c file
+      char *args[]={"./EXEC",NULL};
+      execvp(args[0],args);
+
+      puts("This will not print");
     }
 
     return 0;
