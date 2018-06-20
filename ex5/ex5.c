@@ -29,6 +29,11 @@ int main()
       exit(1);
     }
 
+    // write messages to array
+    write(p[1], msg1, MSGSIZE);
+    write(p[1], msg2, MSGSIZE);
+    write(p[1], msg3, MSGSIZE);
+
     
     return 0;
 }
