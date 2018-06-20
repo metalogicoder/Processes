@@ -15,6 +15,9 @@ int main(int argc, char *argv[])
     if (rc < 0) {
       fprintf(stderr, "fork failed\n");
       exit(1);
+    } else if (rc == 0) {
+      x = 50;
+      printf("ChildID (pid: %d) - X = %d\n", (int) getpid(), x);
     }
 
     return 0;
