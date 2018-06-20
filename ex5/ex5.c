@@ -39,6 +39,13 @@ int main()
     if (rc < 0) { // Fail
       fprintf(stderr, "fork failed\n");
       exit(1);
+    } else if (rc == 0) { // Child
+      puts("- Child -");
+      for (int i = 0; i < 3; i++) {
+        // read messages from array
+        read(p[0], inbuf, MSGSIZE);
+        printf("%s\n", inbuf);
+      }
     }
     
     return 0;
