@@ -15,6 +15,14 @@ int main(int argc, char* argv[])
     if (rc < 0) { // Fail
       fprintf(stderr, "fork failed\n");
       exit(1);
+    } else if (rc == 0) { // Child
+      puts("- Child -");
+
+      // Lists files in current directory
+      char *args[]={"/bin/ls",NULL};
+      execv(args[0],args);
+
+      puts("This will not print");
     }
 
     return 0;
