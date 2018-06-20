@@ -46,6 +46,8 @@ int main()
         read(p[0], inbuf, MSGSIZE);
         printf("%s\n", inbuf);
       }
+    } else { // Parent
+      puts("- Parent -");
     }
     
     return 0;
