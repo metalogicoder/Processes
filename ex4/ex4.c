@@ -12,7 +12,10 @@ int main(int argc, char* argv[])
     // Your code here
     int rc = fork();
 
-    
+    if (rc < 0) { // Fail
+      fprintf(stderr, "fork failed\n");
+      exit(1);
+    }
 
     return 0;
 }
