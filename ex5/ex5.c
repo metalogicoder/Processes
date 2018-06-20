@@ -22,6 +22,13 @@ int main()
     char inbuf[MSGSIZE];
     // array for read(i = [0]) write(i = [1]) data
     int p[2]; 
+
+    // make sure that pipe is established
+    if (pipe(p) < 0) {
+      fprintf(stderr, "pipe failed\n");
+      exit(1);
+    }
+
     
     return 0;
 }
