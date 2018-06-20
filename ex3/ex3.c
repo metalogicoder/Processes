@@ -17,6 +17,9 @@ int main(int argc, char* argv[])
       exit(1);
     } else if (rc == 0) { // Child
       puts("Hello");
+    } else { // Parent
+      int wc = waitpid(rc, NULL, 0);
+      puts("Goodbye");
     }
 
     return 0;
