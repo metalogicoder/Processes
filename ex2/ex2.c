@@ -12,7 +12,9 @@ int main(int argc, char* argv[])
     FILE *fp;
     fp = fopen("text.txt","r");
 
-
+    int c;
+    int rc = fork();
+ 
 
     return 0;
 }
