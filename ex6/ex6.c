@@ -27,4 +27,9 @@ int main()
     struct timespec start, end;
     double avg;
     
+    // Loop up to iteration number to get average run times
+    for(int i = 0; i < number_iter; i++) {
+
+    }
+
 }
