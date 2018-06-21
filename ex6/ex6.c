@@ -29,7 +29,9 @@ int main()
     
     // Loop up to iteration number to get average run times
     for(int i = 0; i < number_iter; i++) {
-
+      clock_gettime(CLOCK_MONOTONIC, &start); // start time
+      write(1, "", 1);                        // run function
+      clock_gettime(CLOCK_MONOTONIC, &end);   // end time
     }
 
 }
