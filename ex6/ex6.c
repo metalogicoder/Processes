@@ -32,6 +32,15 @@ int main()
       clock_gettime(CLOCK_MONOTONIC, &start); // start time
       write(1, "", 1);                        // run function
       clock_gettime(CLOCK_MONOTONIC, &end);   // end time
-    }
 
+      // Add run time to total in nanoseconds
+      diff += BILLION * (end.tv_sec - start.tv_sec) + end.tv_nsec - start.tv_nsec;
+    }
+    
+    // Divide by iteration count for average
+    avg = diff / (double) number_iter;
+
+    printf("elapsed time = %lf nanoseconds\n", avg);
+    
+    return 0;
 }
